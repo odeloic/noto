@@ -1,0 +1,35 @@
+{
+  "name": "noto",
+  "version": "1.0.0",
+  "description": "Take notes in your browser",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.js\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odeloic/noto.git"
+  },
+  "keywords": [
+    "js",
+    "ui",
+    "vanilla"
+  ],
+  "author": "odeloic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odeloic/noto/issues"
+  },
+  "homepage": "https://github.com/odeloic/noto#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1"
+  }
+}
