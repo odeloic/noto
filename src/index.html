@@ -8,7 +8,71 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>Welcome to Noto. 2020.02.02</h1>
+    <div class="app-container">
+      <aside class="aside">
+        <header class="aside__header pd-container">
+          <div class="aside__controls">
+            <h3 class="color-white">All Articles</h3>
+            <button class="link color-blue">Search</button>
+          </div>
+        </header>
+        <!-- aside header-->
+        <ul class="todos-list">
+          <li>
+            <article class="todo">
+              <div class="pd-container">
+                <header class="todo__header">
+                  <h3 class="todo__title color-white">New Todo</h3>
+                  <span class="todo__date">2020/02/02</span>
+                </header>
+                <!-- todo header-->
+                <div class="todo__body">
+                  <p class="todo__summary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolorem rem dignissimos, eveniet id fuga ratione aut magnam
+                    deserunt optio.
+                  </p>
+                </div>
+                <!-- todo body-->
+                <footer class="todo__footer">
+                  <button class="link color-red">Delete</button>
+                </footer>
+                <!-- todo footer -->
+              </div>
+            </article>
+            <!-- todo -->
+            <article class="todo">
+              <div class="pd-container">
+                <header class="todo__header">
+                  <h3 class="todo__title color-white">New Todo</h3>
+                  <span class="todo__date">2020/02/02</span>
+                </header>
+                <!-- todo header-->
+                <div class="todo__body">
+                  <p class="todo__summary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolorem rem dignissimos, eveniet id fuga ratione aut magnam
+                    deserunt optio.
+                  </p>
+                </div>
+                <!-- todo body-->
+                <footer class="todo__footer">
+                  <button class="link color-red">Delete</button>
+                </footer>
+                <!-- todo footer -->
+              </div>
+            </article>
+            <!-- todo -->
+          </li>
+        </ul>
+      </aside>
+      <main class="content">
+        <div class="app-welcome">
+          <h2 class="color-dark">Feeling inspired ?</h2>
+          <button class="btn btn--big btn--red">Start writting</button>
+        </div>
+      </main>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
