@@ -17,62 +17,24 @@
           </div>
         </header>
         <!-- aside header-->
-        <ul class="todos-list">
-          <li>
-            <article class="todo">
-              <div class="pd-container">
-                <header class="todo__header">
-                  <h3 class="todo__title color-white">New Todo</h3>
-                  <span class="todo__date">2020/02/02</span>
-                </header>
-                <!-- todo header-->
-                <div class="todo__body">
-                  <p class="todo__summary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Dolorem rem dignissimos, eveniet id fuga ratione aut magnam
-                    deserunt optio.
-                  </p>
-                </div>
-                <!-- todo body-->
-                <footer class="todo__footer">
-                  <button class="link color-red">Delete</button>
-                </footer>
-                <!-- todo footer -->
-              </div>
-            </article>
-            <!-- todo -->
-            <article class="todo">
-              <div class="pd-container">
-                <header class="todo__header">
-                  <h3 class="todo__title color-white">New Todo</h3>
-                  <span class="todo__date">2020/02/02</span>
-                </header>
-                <!-- todo header-->
-                <div class="todo__body">
-                  <p class="todo__summary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Dolorem rem dignissimos, eveniet id fuga ratione aut magnam
-                    deserunt optio.
-                  </p>
-                </div>
-                <!-- todo body-->
-                <footer class="todo__footer">
-                  <button class="link color-red">Delete</button>
-                </footer>
-                <!-- todo footer -->
-              </div>
-            </article>
-            <!-- todo -->
-          </li>
-        </ul>
+        <ul class="todos-list" id="notesList"></ul>
       </aside>
       <main class="content">
-        <div class="app-welcome">
-          <h2 class="color-dark">Feeling inspired ?</h2>
-          <button class="btn btn--big btn--red">Start writting</button>
+        <header class="content__header" id="contentHeader">
+          <button class="btn btn--small btn--green" id="saveBtn">
+            Save this
+          </button>
+        </header>
+        <div class="contentArea" id="contentArea">
+          <div class="app-welcome">
+            <h2 class="color-dark">Feeling inspired ?</h2>
+            <button class="btn btn--big btn--red" id="showEditorBtn">
+              Start writting
+            </button>
+          </div>
         </div>
       </main>
     </div>
-    <script src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
