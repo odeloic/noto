@@ -1,7 +1,8 @@
 {
   "extends": ["airbnb-base"],
   "rules": {
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "import/prefer-default-export": "true"
   },
   "env": {
     "browser": true
