@@ -2,6 +2,10 @@ import { getFormattedDate } from '../utils/helpers';
 
 export default class Note {
   constructor(title, body) {
+    this.id = title
+      .toLowerCase()
+      .split(' ')
+      .join('-');
     this.title = title;
     this.body = body;
     this.updated_at = new Date();
@@ -9,6 +13,7 @@ export default class Note {
 
   getNote() {
     return {
+      id: this.id,
       title: this.title,
       body: this.body,
       date: this.updated_at
@@ -21,18 +26,18 @@ export default class Note {
     this.updated_at = new Date();
   }
 
-  renderNote() {
+  renderNote({ id, title, body, date }) {
     const noteMarkup = `
       <article class="todo">
         <div class="pd-container">
           <header class="todo__header">
-            <h3 class="todo__title color-white">${this.title}</h3>
-            <span class="todo__date">${getFormattedDate(this.updated_at)}</span>
+            <h3 class="todo__title color-white">${title}</h3>
+            <span class="todo__date">${getFormattedDate(date)}</span>
           </header>
           <!-- todo header-->
           <div class="todo__body">
             <p class="todo__summary">
-              ${this.body}
+              ${body}
             </p>
           </div>
           <!-- todo body-->
@@ -44,6 +49,7 @@ export default class Note {
       </article>
     `;
     const newNoteEl = document.createElement('li');
+    newNoteEl.id = id;
     newNoteEl.innerHTML = noteMarkup;
     return newNoteEl;
   }

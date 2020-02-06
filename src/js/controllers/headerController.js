@@ -1,30 +1,35 @@
+export const controlBtns = [
+  { btn: 'save', node: document.getElementById('saveBtn') },
+  { btn: 'edit', node: document.getElementById('editBtn') },
+  { btn: 'delete', node: document.getElementById('deleteBtn') },
+  { btn: 'new', node: document.getElementById('newNoteBtn') },
+  { btn: 'update', node: document.getElementById('updateNoteBtn') }
+];
+
+const activateBtn = (btn = '') => {
+  controlBtns.forEach(button => {
+    // check for the current btn to be active and activate it
+    if (button.btn === btn) button.node.classList.add('active');
+  });
+};
+
 export function activateBtns(view) {
-  const saveBtn = document.getElementById('saveBtn');
-  const editBtn = document.getElementById('editBtn');
-  const deleteBtn = document.getElementById('deleteBtn');
   const header = document.getElementById('contentHeader');
   if (header) header.classList.add('visible');
   switch (view) {
     case 'viewNote':
-      editBtn.classList.add('active');
-      deleteBtn.classList.add('active');
-      if (saveBtn.classList.contains('active'))
-        saveBtn.classList.remove('active');
+      activateBtn('edit');
+      activateBtn('new');
+      activateBtn('delete');
       break;
     case 'noteForm':
-      saveBtn.classList.add('active');
-      if (editBtn.classList.contains('active'))
-        editBtn.classList.remove('active');
-      if (deleteBtn.classList.contains('active'))
-        deleteBtn.classList.remove('active');
+      activateBtn('save');
+      break;
+    case 'editForm':
+      activateBtn('update');
       break;
     default:
-      if (saveBtn.classList.contains('active'))
-        saveBtn.classList.remove('active');
-      if (editBtn.classList.contains('active'))
-        editBtn.classList.remove('active');
-      if (deleteBtn.classList.contains('active'))
-        deleteBtn.classList.remove('active');
+      activateBtn('');
       break;
   }
 }

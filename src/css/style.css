@@ -123,6 +123,11 @@ button:focus {
   color: var(--white);
 }
 
+.btn--orange {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
 .btn--big {
   padding: 1.5rem 2rem;
   font-size: 1.4rem;
@@ -182,8 +187,13 @@ button:focus {
   display: none;
 }
 
+
 .content__header .btn.active {
   display: inline-block;
+}
+
+.content__header #newNoteBtn {
+  justify-self: self-end;
 }
 
 .content__header.visible {
