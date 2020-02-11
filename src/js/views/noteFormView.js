@@ -3,8 +3,8 @@ import { activateBtns } from '../controllers/headerController';
 function editorElm({ title = '', body = '' }) {
   return `
     <form class="newNoteForm">
-      <input type="text" name="title" placeholder="title" class="newNoteForm__title" id="noteTitle" value="${title}">
-      <textarea placeholder="start typing..." class="newNoteForm__body" id="noteBody">${body}</textarea>
+      <input type="text" name="title" placeholder="title" class="newNoteForm__title" id="noteTitle" value="${title}" required>
+      <textarea placeholder="start typing..." class="newNoteForm__body" id="noteBody" required>${body}</textarea>
     </form>
   `;
 }

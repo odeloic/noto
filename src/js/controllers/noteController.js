@@ -30,4 +30,6 @@ export function updateNote(noteId, params) {
   const oldNoteNode = document.getElementById(noteId);
   const newNoteNode = updatedNote.renderNote(updatedNote.getNote());
   notesListNode.replaceChild(newNoteNode, oldNoteNode);
+  attachViewToContentArea(viewNoteView(updatedNote.getNote()), 'viewNote');
+  methods.setActiveNote(updatedNote.id);
 }

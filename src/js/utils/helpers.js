@@ -15,3 +15,12 @@ const months = [
 export function getFormattedDate(dateObj) {
   return `${dateObj.getDay()} ${months[dateObj.getMonth() - 1]}`;
 }
+
+export function isNoteValid({ title, body }) {
+  if (title === '' || body === '') {
+    alert('Please Fill all the fields!');
+    return false;
+  } else {
+    return true;
+  }
+}

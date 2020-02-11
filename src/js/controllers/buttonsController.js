@@ -2,9 +2,12 @@ import { noteFormState } from '../views/noteFormView';
 import { saveNote, editNote, updateNote } from '../controllers/noteController';
 import { renderNewNoteForm } from '../views/noteFormView';
 import { state } from '../store';
+import { isNoteValid } from '../utils/helpers';
 export function onClickSaveBtn() {
   const { title = '', body = '' } = noteFormState();
-  saveNote({ title, body });
+  if (isNoteValid({ title, body })) {
+    saveNote({ title, body });
+  }
 }
 export function onClickDeleteBtn() {}
 export function onClickEditBtn() {
@@ -18,5 +21,7 @@ export function onClickNewNoteBtn() {
 export function onClickUpdateNoteBtn() {
   const activeNoteId = state.activeNoteId;
   const { title = '', body = '' } = noteFormState();
-  updateNote(activeNoteId, { title, body });
+  if (isNoteValid({ title, body })) {
+    updateNote(activeNoteId, { title, body });
+  }
 }
