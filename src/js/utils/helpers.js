@@ -18,9 +18,9 @@ export function getFormattedDate(dateObj) {
 
 export function isNoteValid({ title, body }) {
   if (title === '' || body === '') {
+    // eslint-disable-next-line no-alert
     alert('Please Fill all the fields!');
     return false;
-  } else {
-    return true;
   }
+  return true;
 }

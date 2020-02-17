@@ -6,17 +6,17 @@ import {
   onClickNewNoteBtn,
   onClickUpdateNoteBtn
 } from './controllers/buttonsController';
+import { deleteNote } from './controllers/noteController';
 
-const showEditorBtn = document.getElementById('showEditorBtn');
-const saveBtn = document.getElementById('saveBtn');
-const editBtn = document.getElementById('editBtn');
-const deleteBtn = document.getElementById('deleteBtn');
-const newNoteBtn = document.getElementById('newNoteBtn');
-const updateNoteBtn = document.getElementById('updateNoteBtn');
-showEditorBtn.addEventListener('click', renderNewNoteForm);
-if (saveBtn) saveBtn.addEventListener('click', onClickSaveBtn);
-if (editBtn) editBtn.addEventListener('click', onClickEditBtn);
-if (deleteBtn) deleteBtn.addEventListener('click', onClickDeleteBtn);
-if (newNoteBtn) newNoteBtn.addEventListener('click', onClickNewNoteBtn);
-if (updateNoteBtn)
-  updateNoteBtn.addEventListener('click', onClickUpdateNoteBtn);
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete-note-btn')) {
+    const noteId = e.target.parentElement.parentElement.parentElement.parentElement.id;
+    deleteNote(noteId);
+  }
+  if (e.target.id === 'showEditorBtn') renderNewNoteForm();
+  if (e.target.id === 'editBtn') onClickEditBtn();
+  if (e.target.id === 'saveBtn') onClickSaveBtn();
+  if (e.target.id === 'deleteBtn') onClickDeleteBtn();
+  if (e.target.id === 'newNoteBtn') onClickNewNoteBtn();
+  if (e.target.id === 'updateNoteBtn') onClickUpdateNoteBtn();
+});

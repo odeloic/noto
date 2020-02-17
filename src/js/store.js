@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-shadow */
 export const state = {
   notes: [],
   activeNoteId: null
@@ -14,7 +16,7 @@ export const methods = {
   },
   editNote: (state, noteId, params) => {
     let updatedNote;
-    const updatedNotes = state.notes.map(note => {
+    const updatedNotes = state.notes.map((note) => {
       if (note.id === noteId) {
         note.title = params.title;
         note.body = params.body;
@@ -25,5 +27,11 @@ export const methods = {
     state.notes = updatedNotes;
     return updatedNote;
   },
-  setActiveNote: noteId => (state.activeNoteId = noteId)
+  setActiveNote(noteId) {
+    state.activeNoteId = noteId;
+  },
+  deleteNote: (state, noteId) => {
+    const notes = state.notes.filter((note) => noteId !== note.id);
+    state.notes = notes;
+  }
 };

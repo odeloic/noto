@@ -1,5 +1,6 @@
 import { attachViewToContentArea } from '../controllers/contentAreaController';
 import { activateBtns } from '../controllers/headerController';
+
 function editorElm({ title = '', body = '' }) {
   return `
     <form class="newNoteForm">
@@ -9,15 +10,16 @@ function editorElm({ title = '', body = '' }) {
   `;
 }
 
-export function renderNewNoteForm() {
-  attachViewToContentArea(noteFormView({ title: '', body: '' }));
-  activateBtns('noteForm');
-}
 export function noteFormView(note) {
   const newElem = document.createElement('div');
   newElem.className = 'noteEditor';
   newElem.innerHTML = editorElm({ title: note.title, body: note.body });
   return newElem;
+}
+
+export function renderNewNoteForm() {
+  attachViewToContentArea(noteFormView({ title: '', body: '' }));
+  activateBtns('noteForm');
 }
 
 export function noteFormState() {

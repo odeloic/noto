@@ -26,7 +26,13 @@ export default class Note {
     this.updated_at = new Date();
   }
 
-  renderNote({ id, title, body, date }) {
+  // eslint-disable-next-line class-methods-use-this
+  renderNote({
+    id,
+    title,
+    body,
+    date
+  }) {
     const noteMarkup = `
       <article class="todo">
         <div class="pd-container">
@@ -42,12 +48,13 @@ export default class Note {
           </div>
           <!-- todo body-->
           <footer class="todo__footer">
-            <button class="link color-red">Delete</button>
+            <button class="link color-red delete-note-btn">Delete</button>
           </footer>
           <!-- todo footer -->
         </div>
       </article>
     `;
+
     const newNoteEl = document.createElement('li');
     newNoteEl.id = id;
     newNoteEl.innerHTML = noteMarkup;
