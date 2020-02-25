@@ -5,37 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Noto</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./scss/main.scss" />
   </head>
   <body>
     <div class="app-container">
       <aside class="aside">
         <header class="aside__header pd-container">
           <div class="aside__controls">
-            <h3 class="color-white">All Articles</h3>
-            <button class="link color-blue">Search</button>
+            <h3 class="app-logo color-white">NOTO</h3>
+            <button class="btn color-white btn-icon" id="newNoteBtn">
+              <i class="far fa-sticky-note"></i>
+              <span>New</span>
+            </button>
           </div>
+          <form class="search-form">
+            <input type="search" placeholder="Search notes" />
+          </form>
         </header>
         <!-- aside header-->
         <ul class="todos-list" id="notesList"></ul>
       </aside>
       <main class="content">
         <header class="content__header" id="contentHeader">
-          <button class="btn btn--small btn--green" id="saveBtn">
-            Save this
-          </button>
-          <button class="btn btn--small btn--blue" id="editBtn">
-            Edit note
-          </button>
-          <button class="btn btn--small btn--red" id="deleteBtn">
-            Delete
-          </button>
-          <button class="btn btn--small btn--orange" id="newNoteBtn">
-            Add New note
-          </button>
-          <button class="btn btn--small btn--green" id="updateNoteBtn">
-            Update Note
-          </button>
+          <p><span>Last Updated: </span>26th February 2020</p>
+          <div class="content__header-buttons">
+            <button class="btn btn--small btn-icon" id="saveBtn">
+              <i class="far fa-save"></i>
+            </button>
+            <button class="btn btn--small btn-icon" id="editBtn">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn btn--small btn-icon" id="deleteBtn">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+            <button class="btn btn--small btn-icon" id="updateNoteBtn">
+              <i class="far fa-save"></i>
+            </button>
+          </div>
+          <!-- content header buttons -->
         </header>
         <div class="contentArea" id="contentArea">
           <div class="app-welcome">

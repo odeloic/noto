@@ -15,6 +15,15 @@
   --red: #FF566A;
   --green: #81C342;
   --orange: #F5A623;
+  --color-primary: #3B141E;
+  --color-primary--dark: #311119;
+  --color-primary--light: #511C29;
+  --color-gray: #D8D8D8;
+  --color-gray--light: #F3F3F3;
+  --color-orange: #F26430;
+  --color-lightBlue: #93B7BE;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
 }
 
@@ -45,7 +54,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Robot', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* lists */
@@ -140,6 +149,20 @@ button:focus {
   border-radius: 8px;
 }
 
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon img {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.btn-icon span {
+  font-size: 1.3rem;
+}
+
 /* layout */
 
 .app-container {
@@ -154,12 +177,20 @@ button:focus {
 
 .aside {
   flex-basis: 30%;
-  background-color: var(--black);
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0rem;
+  padding: 5rem 0rem;
   color: var(--white);
+}
+
+.aside .pd-container {
+  padding: 0rem 5rem;
+}
+
+.app-logo {
+  font-size: 2.7rem;
 }
 
 .content {
@@ -174,9 +205,20 @@ button:focus {
   visibility: hidden;
   opacity: 0;
   transition: all .3s ease-in-out;
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 3.2rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.content__header p {
+  color: var(--color-primary--light);
+  font-weight: 300;
+}
+
+.content__header p span {
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .content__header .btn:not(:last-child) {
@@ -225,7 +267,23 @@ button:focus {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+
+.search-form {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 2rem 3rem;
+  border-radius: 3rem;
+  background-color: var(--color-primary--dark);
+  font-size: 1.3rem;
+  font-family: inherit;
+  color: var(--color-gray--light);
+  font-weight: 500;
 }
 
 
@@ -351,7 +409,7 @@ textarea:focus {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 3rem 2rem;
+  padding: 5rem 8rem;
 }
 
 .view-note__title {

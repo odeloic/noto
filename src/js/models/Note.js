@@ -48,7 +48,7 @@ export default class Note {
           </div>
           <!-- todo body-->
           <footer class="todo__footer">
-            <button class="link color-red delete-note-btn">Delete</button>
+            <button class="btn color-white delete-note-btn btn-icon"><i class="fas fa-trash-alt"></i></button>
           </footer>
           <!-- todo footer -->
         </div>

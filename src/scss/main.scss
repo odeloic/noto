@@ -1,0 +1,22 @@
+@import "./base";
+@import "./variables";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "./colors";
+@import "./typography";
+@import "./buttons";
+@import "./layout";
+@import "./content";
+@import "./aside";
+@import "./header";
+@import "./todos-list";
+@import "./todo";
+@import "./noteForm";
+@import "./view-note";
+@import "./welcome";
+@import "./search-form";
+
+.app-logo {
+  font-size: 2.7rem;
+}
