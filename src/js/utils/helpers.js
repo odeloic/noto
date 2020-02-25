@@ -24,3 +24,34 @@ export function isNoteValid({ title, body }) {
   }
   return true;
 }
+
+export function buildNotesList(notes) {
+  const notesListNode = document.getElementById('notesList');
+
+  notes.forEach((note) => {
+    const noteEl = document.createElement('li');
+    noteEl.id = note.id;
+    noteEl.innerHTML = `
+      <article class="todo">
+        <div class="pd-container">
+          <header class="todo__header">
+            <h3 class="todo__title color-white">${note.title}</h3>
+            <span class="todo__date">${getFormattedDate(new Date(note.updated_at))}</span>
+          </header>
+          <!-- todo header-->
+          <div class="todo__body">
+            <p class="todo__summary">
+              ${note.body}
+            </p>
+          </div>
+          <!-- todo body-->
+          <footer class="todo__footer">
+            <button class="btn color-white delete-note-btn btn-icon"><i class="fas fa-trash-alt"></i></button>
+          </footer>
+          <!-- todo footer -->
+        </div>
+      </article>
+    `;
+    notesListNode.appendChild(noteEl);
+  });
+}

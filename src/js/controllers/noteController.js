@@ -4,9 +4,16 @@ import { renderWelcomeView } from '../views/welcomeView';
 import { viewNoteView } from '../views/viewNoteView';
 import { noteFormView } from '../views/noteFormView';
 import { state, methods } from '../store';
+import { buildNotesList } from '../utils/helpers';
+
+export function initNotes() {
+  const { notes } = state;
+  if (notes.length) {
+    buildNotesList(notes);
+  }
+}
 
 export function saveNote(note) {
-  console.log('ssss')
   const newNote = new Note(note.title, note.body);
   methods.addNote(state, newNote);
   const notesList = document.getElementById('notesList');

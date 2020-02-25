@@ -6,7 +6,9 @@ import {
   onClickNewNoteBtn,
   onClickUpdateNoteBtn
 } from './controllers/buttonsController';
-import { deleteNote } from './controllers/noteController';
+import { initNotes, deleteNote } from './controllers/noteController';
+
+initNotes();
 
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete-note-btn')) {
