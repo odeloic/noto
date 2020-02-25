@@ -1,0 +1,19 @@
+.view-note {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 8rem;
+}
+
+.view-note__title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.view-note p {
+  color: var(--blue--dark);
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.8;
+}

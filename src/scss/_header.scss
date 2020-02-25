@@ -1,0 +1,44 @@
+.content__header {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  padding: 2.5rem 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__header p {
+  color: var(--color-primary--light);
+  font-weight: 300;
+}
+
+.content__header p span {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.content__header .btn:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.content__header .btn {
+  display: none;
+}
+
+
+.content__header .btn.active {
+  display: inline-block;
+}
+
+.content__header #newNoteBtn {
+  justify-self: self-end;
+}
+
+.content__header.visible {
+  visibility: visible;
+  opacity: 1;
+  flex-basis: 8%;
+  width: 100%;
+  background-color: var(--gray--light);
+}
